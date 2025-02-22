@@ -4,70 +4,94 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noble Time</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header>
-      <div class="bg-container">
-        <div class="container">
-          <nav class="nav">
-            <div class="logo">
-              <svg class="logo__svg">
-                <use
-                  class=""
-                  href="./svg/symbol-defs.svg#icon-logo_small"
-                ></use>
-              </svg>
-              <p class="logo__text">Noble Time</p>
-            </div>
-            <ul class="nav-list">
-              <li class="nav-list__el">Home</li>
-              <li class="nav-list__el">About us</li>
-              <li class="nav-list__el">Brands</li>
-              <li class="nav-list__el">Collection</li>
-              <li class="nav-list__el">Contacts</li>
-            </ul>
-            <div class="burger">
-              <span class="burger__bar"></span>
-              <span class="burger__bar"></span>
-              <span class="burger__bar"></span>
-            </div>
-          </nav>
-          <section class="hero">
-            <h2 class="hero__title">Here Elegance meets Precision</h2>
-            <p class="hero__text">
-              Exclusive collection of luxury watches from world-renowned brands
-              is a real blending of timeless design and modern innovation
-            </p>
-            <button class="hero__btn">Discover now</button>
-          </section>
-        </div>
+   
+        <div class="bg-container">
+          <div class="container">
+            <nav class="nav">
+              <div class="logo">
+                <svg class="logo__svg">
+                  <use href="./svg/symbol-defs.svg#icon-logo_small"></use>
+                </svg>
+                <p class="logo__text">Noble Time</p>
+              </div>
+              <ul class="nav-list">
+                <li class="nav-list__el">Home</li>
+                <li class="nav-list__el">About us</li>
+                <li class="nav-list__el">Brands</li>
+                <li class="nav-list__el">Collection</li>
+                <li class="nav-list__el">Contacts</li>
+              </ul>
+              <div class="burger">
+                <span class="burger__bar"></span>
+                <span class="burger__bar"></span>
+                <span class="burger__bar"></span>
+              </div>
+            </nav>
+            <section class="hero">
+              <h2 class="hero__title">Here Elegance meets Precision</h2>
+              <p class="hero__text">
+                Exclusive collection of luxury watches from world-renowned brands
+                is a real blending of timeless design and modern innovation
+              </p>
+              <button class="hero__btn">Discover now</button>
+            </section>
+          </div>
+  
+     
       </div>
     </header>
     <main>
-      <!-- <section class="timeless">
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img class="swiper-img" src="./img/clock_1.png" alt="#" />
+      <!------------------------------- swiperTimeless ------------------------------->
+      <section class="timeless">
+        <h2 class="timeless-title">Timeless Luxury</h2>
+        <div class="swiper-timeless">
+          <div class="swiper-wrapper swiper-wrapper__timeless">
+            <div class="swiper-slide timeles-slide">
+              <img
+                class="swiper__timeless-img"
+                src="./img/clock_1.png"
+                alt="#"
+              />
             </div>
-            <div class="swiper-slide">
-              <img class="swiper-img" src="./img/clock_2.png" alt="#" />
+
+            <div class="swiper-slide timeles-slide">
+              <img
+                class="swiper__timeless-img"
+                src="./img/clock_1.png"
+                alt="#"
+              />
             </div>
-            <div class="swiper-slide">
-              <img class="swiper-img" src="./img/clock_3.png" alt="#" />
+
+            <div class="swiper-slide timeles-slide">
+              <img
+                class="swiper__timeless-img"
+                src="./img/clock_1.png"
+                alt="#"
+              />
+            </div>
+            <div class="swiper-slide timeles-slide">
+              <img
+                class="swiper__timeless-img"
+                src="./img/clock_1.png"
+                alt="#"
+              />
             </div>
           </div>
 
-          <div class="swiper-pagination"></div>
-
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
-          <div class="swiper-scrollbar"></div>
         </div>
-      </section> -->
+      </section>
+      <!------------------------------- about ------------------------------->
 
       <section class="about container">
         <img src="./img/about-img.jpg" alt="man" class="about__img" />
@@ -82,44 +106,49 @@
         </p>
       </section>
 
-      <!-- <section class="brands">
+      <section class="brands">
         <h2 class="brands__title">Brands</h2>
-        <ul class="brands__list">
-          <li class="brands__list-el">
-            <img class="brands__img" src="./img/breguet.png" alt="breguet" />
-          </li>
-          <li class="brands__list-el patek">
-            <img
-              class="brands__img"
-              src="./img/patek_philippe.png"
-              alt="patek philippe"
-            />
-          </li>
-          <li class="brands__list-el">
-            <img class="brands__img" src="./img/rolex.png" alt="rolex" />
-          </li>
-          <li class="brands__list-el">
-            <img class="brands__img" src="./img/omega.png" alt="omega" />
-          </li>
-          <li class="brands__list-el">
-            <img
-              class="brands__img"
-              src="./img/audemars-piguet.png"
-              alt="udemars piguet"
-            />
-          </li>
-          <li class="brands__list-el">
-            <img
-              class="brands__img"
-              src="./img/ulysse-nardin.png"
-              alt="ulysse nardin"
-            />
-          </li>
-        </ul>
-        
-      </section> -->
+
+        <!--------------------------------- brands-swiper --------------------------------->
+
+        <div class="swiper swiper-brands">
+          <div class="swiper-wrapper brands__list">
+
+            <div class="swiper-slide brands__list-el">
+              <img class="brands__img" src="./img/breguet.png" alt="breguet" />
+            </div>
+
+            <div class="swiper-slide brands__list-el">
+              <img
+                class="brands__img"
+                src="./img/patek_philippe.png"
+                alt="patek philippe"
+              />
+            </div>
+
+            <div class="swiper-slide brands__list-el">
+              <img class="brands__img" src="./img/rolex.png" alt="rolex" />
+            </div>
+
+            <div class="swiper-slide brands__list-el">
+              <img class="brands__img" src="./img/ulysse-nardin.png" alt="rolex" />
+            </div>
+
+            <div class="swiper-slide brands__list-el">
+              <img class="brands__img" src="./img/omega.png" alt="rolex" />
+            </div>
+
+            <div class="swiper-slide brands__list-el">
+              <img class="brands__img" src="./img/audemars-piguet.png" alt="rolex" />
+            </div>
+
+          </div>
+          <!---------------------------------  --------------------------------->
+        </div>
+      </section>
     </main>
     <footer></footer>
-    <script src="./js/timeless-swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
   </body>
 </html>
