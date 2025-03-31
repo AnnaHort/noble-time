@@ -40,4 +40,21 @@ const swiperBrands = new Swiper('.swiper-brands', {
     // швидікість автопрокруту 
     speed: 3000,
   });
+
+
+  const swiperTestimonials = new Swiper('.swiper-testimonials', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    centeredSlides: true, // Центрує активний слайд
+
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next__testimonials',
+      prevEl: '.swiper-button-prev__testimonials',
+    },
+      });
+
   

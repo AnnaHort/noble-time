@@ -8,45 +8,49 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <style>
+      #map {
+        width: 100%;
+        height: 500px;
+      }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header>
-   
-        <div class="bg-container">
-          <div class="container">
-            <nav class="nav">
-              <div class="logo">
-                <svg class="logo__svg">
-                  <use href="./svg/symbol-defs.svg#icon-logo_small"></use>
-                </svg>
-                <p class="logo__text">Noble Time</p>
-              </div>
-              <ul class="nav-list">
-                <li class="nav-list__el">Home</li>
-                <li class="nav-list__el">About us</li>
-                <li class="nav-list__el">Brands</li>
-                <li class="nav-list__el">Collection</li>
-                <li class="nav-list__el">Contacts</li>
-              </ul>
-              <div class="burger">
-                <span class="burger__bar"></span>
-                <span class="burger__bar"></span>
-                <span class="burger__bar"></span>
-              </div>
-            </nav>
-            <section class="hero">
-              <h2 class="hero__title">Here Elegance meets Precision</h2>
-              <p class="hero__text">
-                Exclusive collection of luxury watches from world-renowned brands
-                is a real blending of timeless design and modern innovation
-              </p>
-              <button class="hero__btn">Discover now</button>
-            </section>
-          </div>
-  
-     
+      <div class="bg-container">
+        <div class="container">
+          <nav class="nav">
+            <div class="logo">
+              <svg class="logo__svg">
+                <use href="./svg/symbol-defs.svg#icon-logo_small"></use>
+              </svg>
+              <p class="logo__text">Noble Time</p>
+            </div>
+            <ul class="nav-list">
+              <li class="nav-list__el">Home</li>
+              <li class="nav-list__el">About us</li>
+              <li class="nav-list__el">Brands</li>
+              <li class="nav-list__el">Collection</li>
+              <li class="nav-list__el">Contacts</li>
+            </ul>
+            <div class="burger">
+              <span class="burger__bar"></span>
+              <span class="burger__bar"></span>
+              <span class="burger__bar"></span>
+            </div>
+          </nav>
+          <section class="hero">
+            <h2 class="hero__title">Here Elegance meets Precision</h2>
+            <p class="hero__text">
+              Exclusive collection of luxury watches from world-renowned brands
+              is a real blending of timeless design and modern innovation
+            </p>
+            <button class="hero__btn">Discover now</button>
+          </section>
+        </div>
       </div>
     </header>
     <main>
@@ -94,7 +98,10 @@
       <!------------------------------- about ------------------------------->
 
       <section class="about container">
-        <img src="./img/about-img.jpg" alt="man" class="about__img" />
+        <div class="about__img-container">
+          <img src="./img/about-img.jpg" alt="man" class="about__img" />
+        </div>
+      
         <h3 class="about__title">About</h3>
         <p class="about__text">
           Noble Time is a destination for luxury timepieces that redefine
@@ -111,7 +118,6 @@
         <h2 class="brands__title">Brands</h2>
         <div class="swiper swiper-brands">
           <div class="swiper-wrapper brands__list">
-
             <div class="swiper-slide brands__list-el">
               <img class="brands__img" src="./img/breguet.png" alt="breguet" />
             </div>
@@ -129,7 +135,11 @@
             </div>
 
             <div class="swiper-slide brands__list-el">
-              <img class="brands__img" src="./img/ulysse-nardin.png" alt="rolex" />
+              <img
+                class="brands__img"
+                src="./img/ulysse-nardin.png"
+                alt="rolex"
+              />
             </div>
 
             <div class="swiper-slide brands__list-el">
@@ -137,32 +147,284 @@
             </div>
 
             <div class="swiper-slide brands__list-el">
-              <img class="brands__img" src="./img/audemars-piguet.png" alt="rolex" />
+              <img
+                class="brands__img"
+                src="./img/audemars-piguet.png"
+                alt="rolex"
+              />
             </div>
-
           </div>
         </div>
       </section>
 
-          <!--------------------------------- gallery-section --------------------------------->
-          <section class="gallery container">
-            <dev class="gallery__container">
-              <img src="./img/gallery-img-1.jpg" alt="" class="gallery__img">
-              <img src="./img/gallery-img-2.jpg" alt="" class="gallery__img">
-              <img src="./img/gallery-img-3.jpg" alt="" class="gallery__img">
-              <img src="./img/gallery-img-4.jpg" alt="" class="gallery__img">
-              <img src="./img/gallery-img-5.jpg" alt="" class="gallery__img">
-            </dev>
-          </section>
+      <!--------------------------------- gallery-section --------------------------------->
+      <section class="gallery container">
+        <div class="gallery__container">
+          <img src="./img/gallery-img-1.jpg" alt="" class="gallery__img" />
+          <img src="./img/gallery-img-2.jpg" alt="" class="gallery__img" />
+          <img src="./img/gallery-img-3.jpg" alt="" class="gallery__img" />
+          <img src="./img/gallery-img-4.jpg" alt="" class="gallery__img" />
+          <img src="./img/gallery-img-5.jpg" alt="" class="gallery__img" />
+        </div>
+      </section>
 
-          <!--------------------------------- collection-section --------------------------------->
+      <!--------------------------------- collection-section --------------------------------->
 
       <section class="collection container">
-        <button class="collection__btn-man"> <span class="collection__btn-text">Men’s Collection</span></button>
-        <button button class="collection__btn-woman"> <span class="collection__btn-text">Women’s Collection</span></button>
+        <button class="collection__btn-man">
+          <span class="collection__btn-text">Men’s Collection</span>
+        </button>
+        <button button class="collection__btn-woman">
+          <span class="collection__btn-text">Women’s Collection</span>
+        </button>
+      </section>
+
+      <!--------------------------------- testimonials-section --------------------------------->
+      <section class="testimonials">
+        <h2 class="testimonials__title">Testimonials</h2>
+        <div class="testimonials__img-container"></div>
+
+        <div class="swiper swiper-testimonials">
+          <div class="swiper-wrapper swiper-wrapper__testimonials">
+            <div class="swiper-slide">
+              <div class="swiper-slide__text-container">
+                <div class="testimonials__svg-container">
+                  <svg
+                    class="testimonials__svg testimonials__svg--top"
+                    width="69"
+                    height="48"
+                  >
+                    <use href="./svg/symbol-defs.svg#icon-first_quotes"></use>
+                  </svg>
+                </div>
+
+                <p class="swiper-slide__text">
+                  I’ve been searching for a masterpiece like this. Noble Time
+                  brought my dream watch to life with their unparalleled
+                  selection and passion for craftsmanship.
+                </p>
+
+                <div class="testimonials__svg-container">
+                  <svg
+                    class="testimonials__svg testimonials__svg--bottom"
+                    width="69"
+                    height="48"
+                  >
+                    <use href="./svg/symbol-defs.svg#icon-first_quotes"></use>
+                  </svg>
+                </div>
+
+                <h3 class="testimonials__author">Sofia L., Collector</h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__text-container">
+                <div class="testimonials__svg-container">
+                  <svg
+                    class="testimonials__svg testimonials__svg--top"
+                    width="69"
+                    height="48"
+                  >
+                    <use href="./svg/symbol-defs.svg#icon-first_quotes"></use>
+                  </svg>
+                </div>
+
+                <p class="swiper-slide__text">
+                  This watch represents timeless elegance and precision. Noble
+                  Time’s exceptional service made finding it effortless. It’s
+                  more than a timepiece — it’s a statement.
+                </p>
+
+                <div class="testimonials__svg-container">
+                  <svg
+                    class="testimonials__svg testimonials__svg--bottom"
+                    width="69"
+                    height="48"
+                  >
+                    <use href="./svg/symbol-defs.svg#icon-first_quotes"></use>
+                  </svg>
+                </div>
+
+                <h3 class="testimonials__author">
+                  Alex M., Business Executive
+                </h3>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide__text-container">
+                <div class="testimonials__svg-container">
+                  <svg
+                    class="testimonials__svg testimonials__svg--top"
+                    width="69"
+                    height="48"
+                  >
+                    <use href="./svg/symbol-defs.svg#icon-first_quotes"></use>
+                  </svg>
+                </div>
+
+                <p class="swiper-slide__text">
+                  This watch isn’t just a purchase; it’s an investment in style
+                  and sophistication. Noble Time ensures every detail reflects
+                  the luxury experience.
+                </p>
+
+                <div class="testimonials__svg-container">
+                  <svg
+                    class="testimonials__svg testimonials__svg--bottom"
+                    width="69"
+                    height="48"
+                  >
+                    <use href="./svg/symbol-defs.svg#icon-first_quotes"></use>
+                  </svg>
+                </div>
+
+                <h3 class="testimonials__author">Daniel H., Entrepreneur</h3>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="swiper-button-prev swiper-button-prev__testimonials"
+          ></div>
+          <div
+            class="swiper-button-next swiper-button-next__testimonials"
+          ></div>
+        </div>
+      </section>
+
+      <!--------------------------------- gallery-photos section --------------------------------->
+      <section class="gallery-photos container">
+        <ul class="gallery-photos__list">
+          <li class="gallery-photos__list-el-1">
+            <img
+              src="./img/gallery-photos_1.jpg"
+              alt=""
+              class="gallery-photos__img"
+            />
+          </li>
+          <li class="gallery-photos__list-el-2">
+            <img
+              src="./img/gallery-photos_2.jpg"
+              alt=""
+              class="gallery-photos__img"
+            />
+          </li>
+          <li class="gallery-photos__list-el-3">
+            <img
+              src="./img/gallery-photos_3.jpg"
+              alt=""
+              class="gallery-photos__img"
+            />
+          </li>
+          <li class="gallery-photos__list-el-4">
+            <img
+              src="./img/gallery-photos_4.jpg"
+              alt=""
+              class="gallery-photos__img"
+            />
+          </li>
+        </ul>
+      </section>
+
+      <!--------------------------------- location section --------------------------------->
+      <section class="location container">
+        <div id="map" class="location__container"></div>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+          // Встановлюємо центр карти на координати магазину
+          const map = L.map("map", { zoomControl: false }).setView(
+            [50.4501, 30.5234],
+            13
+          );
+          L.tileLayer(
+            "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+            {
+              attribution:
+                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+              subdomains: "abcd",
+              maxZoom: 20,
+            }
+          ).addTo(map);
+          // Створюємо кастомну іконку
+          const customIcon = L.divIcon({
+            className: "custom-marker",
+            html: '<svg width="40" height="40"><use href="./svg/symbol-defs.svg#icon-locations-1"></use></svg>',
+            iconSize: [40, 40],
+            iconAnchor: [20, 40],
+          });
+          // Додаємо кастомний маркер на карту
+          L.marker([50.4501, 30.5234], { icon: customIcon }).addTo(map);
+        </script>
+      </section>
+
+      <!--------------------------------- showroom section --------------------------------->
+      <section class="showroom container">
+        <h2 class="showroom__title">Showroom</h2>
+        <p class="showroom__text">
+          Welcome to our showroom. It is a curated sanctuary for watch
+          enthusiasts, offering an exquisite selection of timepieces that blend
+          timeless craftsmanship with modern sophistication. Step inside and
+          immerse yourself in the artistry of iconic brands and exclusive
+          designs.
+        </p>
+        <button class="showroom__btn">Book your time</button>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section class="footer">
+        <div class="footer__container container">
+          <div class="footer__logo-container">
+            <svg class="footer__svg">
+              <use href="./svg/symbol-defs.svg#icon-logo_small"></use>
+            </svg>
+            <p class="footer__text">Noble Time</p>
+          </div>
+          <ul class="footer__list">
+            <li class="footer__list-el">
+              Location 
+              <span>Johannis Str. 15C</span>
+            </li>
+            <li class="footer__list-el">
+              Contact
+              <a href="tel:+48730756352">+48730756352</a>
+            </li>
+            <li class="footer__list-el">Working hours
+              <span>Mo - Sat 9:00-18:00</span></li>
+          
+            <li class="footer__list-el">
+              E-mail
+              <a href="mailto:info@noble.time@gmail.com">info@noble.time@gmail.com</a>
+            </li>
+          </ul>
+          <ul class="footer__socials">
+            <li class="footer__socials-el">
+              <a href="https://www.instagram.com/" class="footer__socials-el" target="_blank">
+                <svg class="footer__socials-svg">
+                  <use href="./svg/symbol-defs.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer__socials-el">
+              <a href="https://www.facebook.com/" class="footer__socials-el" target="_blank">
+                <svg class="footer__socials-svg">
+                  <use href="./svg/symbol-defs.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+  
+            <li class="footer__socials-el">
+              <a href="https://invite.viber.com/?g=abcdef123456789"  class="footer__socials-el" target="_blank">
+                <svg class="footer__socials-svg">
+                  <use href="./svg/symbol-defs.svg#icon-viber"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      
+      </section>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
   </body>
