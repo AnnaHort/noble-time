@@ -53,6 +53,44 @@
         </div>
       </div>
     </header>
+
+<!------------------------------- mobile menu ------------------------------->
+<div class="overlay">
+  <div class="mobile-menu">
+    <button class="mobile-menu__close">&times;</button>
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">Home</li>
+      <li class="mobile-menu__item">About us</li>
+      <li class="mobile-menu__item">Brands</li>
+      <li class="mobile-menu__item">Collection</li>
+      <li class="mobile-menu__item">Contacts</li>
+    </ul>
+    <ul class="mobile-menu__socials">
+      <li class="mobile-menu__socials-el">
+        <a href="https://www.instagram.com/" target="_blank">
+          <svg class="mobile-menu__socials-svg" width="24" height="24">
+            <use href="./svg/symbol-defs.svg#icon-instagram"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="mobile-menu__socials-el">
+        <a href="https://www.facebook.com/" target="_blank">
+          <svg class="mobile-menu__socials-svg" width="24" height="24">
+            <use href="./svg/symbol-defs.svg#icon-facebook"></use>
+          </svg>
+        </a>
+      </li>
+      <li class="mobile-menu__socials-el">
+        <a href="https://invite.viber.com/?g=abcdef123456789" target="_blank">
+          <svg class="mobile-menu__socials-svg" width="24" height="24">
+            <use href="./svg/symbol-defs.svg#icon-viber"></use>
+          </svg>
+        </a>
+      </li>
+  </ul>
+  </div>
+</div>
+
     <main>
       <!------------------------------- swiperTimeless ------------------------------->
       <section class="timeless">
@@ -427,5 +465,6 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
