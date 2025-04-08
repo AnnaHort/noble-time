@@ -39,6 +39,15 @@ const swiperBrands = new Swiper('.swiper-brands', {
   
     // швидікість автопрокруту 
     speed: 3000,
+
+    breakpoints: {
+
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+    }
+
   });
 
 
@@ -55,6 +64,15 @@ const swiperBrands = new Swiper('.swiper-brands', {
       nextEl: '.swiper-button-next__testimonials',
       prevEl: '.swiper-button-prev__testimonials',
     },
+
+    breakpoints: {
+
+      768: {
+        slidesPerView: 2,
+        centeredSlides: false,
+      },
+    }
+
       });
 
   
