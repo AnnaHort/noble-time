@@ -14,7 +14,37 @@
         height: 500px;
       }
     </style>
+    <!-- favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="./img/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <meta name="apple-mobile-web-app-title" content="Noble Time" />
+
+    <!-- maps -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- styles -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="main.css" />
   </head>
@@ -54,46 +84,49 @@
       </div>
     </header>
 
-<!------------------------------- mobile menu ------------------------------->
-<div class="overlay">
-  <div class="mobile-menu">
-    <button class="mobile-menu__close">&times;</button>
-    <ul class="mobile-menu__list">
-      <li class="mobile-menu__item">Home</li>
-      <li class="mobile-menu__item">About us</li>
-      <li class="mobile-menu__item">Brands</li>
-      <li class="mobile-menu__item">Collection</li>
-      <li class="mobile-menu__item">Contacts</li>
-    </ul>
-    <ul class="mobile-menu__socials">
-      <li class="mobile-menu__socials-el">
-        <a href="https://www.instagram.com/" target="_blank">
-          <svg class="mobile-menu__socials-svg" width="24" height="24">
-            <use href="./svg/symbol-defs.svg#icon-instagram"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="mobile-menu__socials-el">
-        <a href="https://www.facebook.com/" target="_blank">
-          <svg class="mobile-menu__socials-svg" width="24" height="24">
-            <use href="./svg/symbol-defs.svg#icon-facebook"></use>
-          </svg>
-        </a>
-      </li>
-      <li class="mobile-menu__socials-el">
-        <a href="https://invite.viber.com/?g=abcdef123456789" target="_blank">
-          <svg class="mobile-menu__socials-svg" width="24" height="24">
-            <use href="./svg/symbol-defs.svg#icon-viber"></use>
-          </svg>
-        </a>
-      </li>
-  </ul>
-  </div>
-</div>
+    <!------------------------------- mobile menu ------------------------------->
+    <div class="overlay">
+      <div class="mobile-menu">
+        <button class="mobile-menu__close">&times;</button>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">Home</li>
+          <li class="mobile-menu__item">About us</li>
+          <li class="mobile-menu__item">Brands</li>
+          <li class="mobile-menu__item">Collection</li>
+          <li class="mobile-menu__item">Contacts</li>
+        </ul>
+        <ul class="mobile-menu__socials">
+          <li class="mobile-menu__socials-el">
+            <a href="https://www.instagram.com/" target="_blank">
+              <svg class="mobile-menu__socials-svg" width="24" height="24">
+                <use href="./svg/symbol-defs.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__socials-el">
+            <a href="https://www.facebook.com/" target="_blank">
+              <svg class="mobile-menu__socials-svg" width="24" height="24">
+                <use href="./svg/symbol-defs.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-menu__socials-el">
+            <a
+              href="https://invite.viber.com/?g=abcdef123456789"
+              target="_blank"
+            >
+              <svg class="mobile-menu__socials-svg" width="24" height="24">
+                <use href="./svg/symbol-defs.svg#icon-viber"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
 
     <main>
-      <!------------------------------- swiperTimeless ------------------------------->
-      <section class="timeless">
+      <!-- swiperTimeless -->
+      <section class="timeless container">
         <h2 class="timeless-title">Timeless Luxury</h2>
         <div class="swiper-timeless">
           <div class="swiper-wrapper swiper-wrapper__timeless">
@@ -133,13 +166,13 @@
           <div class="swiper-button-next"></div>
         </div>
       </section>
-      <!------------------------------- about ------------------------------->
+      <!-- about -->
 
       <section class="about container">
         <div class="about__img-container">
           <img src="./img/about-img.jpg" alt="man" class="about__img" />
         </div>
-      
+
         <h3 class="about__title">About</h3>
         <p class="about__text">
           Noble Time is a destination for luxury timepieces that redefine
@@ -151,7 +184,7 @@
         </p>
       </section>
 
-      <!--------------------------------- brands-section --------------------------------->
+      <!---- brands-section ---->
       <section class="brands">
         <h2 class="brands__title">Brands</h2>
         <div class="swiper swiper-brands">
@@ -195,18 +228,82 @@
         </div>
       </section>
 
-      <!--------------------------------- gallery-section --------------------------------->
+      <!---- gallery-section ---->
       <section class="gallery container">
         <div class="gallery__container">
-          <img src="./img/gallery-img-1.jpg" alt="" class="gallery__img" />
-          <img src="./img/gallery-img-2.jpg" alt="" class="gallery__img" />
-          <img src="./img/gallery-img-3.jpg" alt="" class="gallery__img" />
-          <img src="./img/gallery-img-4.jpg" alt="" class="gallery__img" />
-          <img src="./img/gallery-img-5.jpg" alt="" class="gallery__img" />
+          <picture class="gallery__img-1">
+            <source
+              srcset="
+                ./img/gallery/gallery-img-1-2x.jpg 2x,
+                ./img/gallery/gallery-img-1.jpg    1x
+              "
+            />
+            <img
+              src="./img/gallery/gallery-img-1.jpg"
+              alt="gallery-img-1"
+              class="gallery__img-1"
+            />
+          </picture>
+
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-img-2-2x.jpg 2x,
+                ./img/gallery/gallery-img-2.jpg    1x
+              "
+            />
+            <img
+              src="./img/gallery/gallery-img-2.jpg"
+              alt="gallery-img-2"
+              class="gallery__img"
+            />
+          </picture>
+
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-img-3-2x.jpg 2x,
+                ./img/gallery/gallery-img-3.jpg    1x
+              "
+            />
+            <img
+              src="./img/gallery/gallery-img-3.jpg"
+              alt="gallery-img-3"
+              class="gallery__img"
+            />
+          </picture>
+
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-img-4-2x.jpg 2x,
+                ./img/gallery/gallery-img-4.jpg    1x
+              "
+            />
+            <img
+              src="./img/gallery/gallery-img-4.jpg"
+              alt="gallery-img-4"
+              class="gallery__img"
+            />
+          </picture>
+
+          <picture>
+            <source
+              srcset="
+                ./img/gallery/gallery-img-5-2x.jpg 2x,
+                ./img/gallery/gallery-img-5.jpg    1x
+              "
+            />
+            <img
+              src="./img/gallery/gallery-img-5.jpg"
+              alt="gallery-img-5"
+              class="gallery__img"
+            />
+          </picture>
         </div>
       </section>
 
-      <!--------------------------------- collection-section --------------------------------->
+      <!-- collection-section -->
 
       <section class="collection container">
         <button class="collection__btn-man">
@@ -217,7 +314,7 @@
         </button>
       </section>
 
-      <!--------------------------------- testimonials-section --------------------------------->
+      <!-- testimonials-section -->
       <section class="testimonials">
         <h2 class="testimonials__title">Testimonials</h2>
         <div class="testimonials__img-container"></div>
@@ -330,43 +427,78 @@
         </div>
       </section>
 
-      <!--------------------------------- gallery-photos section --------------------------------->
-      <section class="gallery-photos container">
+      <!-- gallery-photos section -->
+      <section class="gallery-photos">
         <ul class="gallery-photos__list">
           <li class="gallery-photos__list-el-1">
-            <img
-              src="./img/gallery-photos_1.jpg"
-              alt=""
-              class="gallery-photos__img"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/gallery-photos/gallery-photos_1-2x.jpg 2x,
+                  ./img/gallery-photos/gallery-photos_1.jpg    1x
+                "
+              />
+              <img
+                src="./img/gallery-photos/gallery-photos_1.jpg"
+                alt="gallery-photos-1"
+                class="gallery-photos__img"
+              />
+            </picture>
           </li>
+
           <li class="gallery-photos__list-el-2">
-            <img
-              src="./img/gallery-photos_2.jpg"
-              alt=""
-              class="gallery-photos__img"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/gallery-photos/gallery-photos_2-2x.jpg 2x,
+                  ./img/gallery-photos/gallery-photos_2.jpg    1x
+                "
+              />
+              <img
+                src="./img/gallery-photos/gallery-photos_2.jpg"
+                alt="gallery-photos-2"
+                class="gallery-photos__img"
+              />
+            </picture>
           </li>
+
           <li class="gallery-photos__list-el-3">
-            <img
-              src="./img/gallery-photos_3.jpg"
-              alt=""
-              class="gallery-photos__img"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/gallery-photos/gallery-photos_3-2x.jpg 2x,
+                  ./img/gallery-photos/gallery-photos_3.jpg    1x
+                "
+              />
+              <img
+                src="./img/gallery-photos/gallery-photos_3.jpg"
+                alt="gallery-photos-3"
+                class="gallery-photos__img"
+              />
+            </picture>
           </li>
+
           <li class="gallery-photos__list-el-4">
-            <img
-              src="./img/gallery-photos_4.jpg"
-              alt=""
-              class="gallery-photos__img"
-            />
+            <picture>
+              <source
+                srcset="
+                  ./img/gallery-photos/gallery-photos_4-2x.jpg 2x,
+                  ./img/gallery-photos/gallery-photos_4.jpg    1x
+                "
+              />
+              <img
+                src="./img/gallery-photos/gallery-photos_4.jpg"
+                alt="gallery-photos-4"
+                class="gallery-photos__img"
+              />
+            </picture>
           </li>
         </ul>
       </section>
 
-      <!--------------------------------- location section --------------------------------->
-      <section class="location container">
-        <div id="map" class="location__container"></div>
+      <!-- location section -->
+      <section class="location">
+        <div id="map" class="  "></div>
 
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script>
@@ -394,20 +526,19 @@
           // Додаємо кастомний маркер на карту
           L.marker([50.4501, 30.5234], { icon: customIcon }).addTo(map);
         </script>
-      </section>
+        <div class="showroom">
+          <h2 class="showroom__title">Showroom</h2>
+          <p class="showroom__text">
+            Welcome to our showroom. It is a curated sanctuary for watch
+            enthusiasts, offering an exquisite selection of timepieces that blend
+            timeless craftsmanship with modern sophistication. Step inside and
+            immerse yourself in the artistry of iconic brands and exclusive
+            designs.
+          </p>
+          <button class="showroom__btn">Book your time</button>
+        </section>
+        </div>
 
-      <!--------------------------------- showroom section --------------------------------->
-      <section class="showroom container">
-        <h2 class="showroom__title">Showroom</h2>
-        <p class="showroom__text">
-          Welcome to our showroom. It is a curated sanctuary for watch
-          enthusiasts, offering an exquisite selection of timepieces that blend
-          timeless craftsmanship with modern sophistication. Step inside and
-          immerse yourself in the artistry of iconic brands and exclusive
-          designs.
-        </p>
-        <button class="showroom__btn">Book your time</button>
-      </section>
     </main>
     <footer>
       <section class="footer">
@@ -420,39 +551,54 @@
           </div>
           <ul class="footer__list">
             <li class="footer__list-el">
-              Location 
+              Location
               <span>Johannis Str. 15C</span>
             </li>
             <li class="footer__list-el">
               Contact
               <a href="tel:+48730756352">+48730756352</a>
             </li>
-            <li class="footer__list-el">Working hours
-              <span>Mo - Sat 9:00-18:00</span></li>
-          
+            <li class="footer__list-el">
+              Working hours <span>Mo - Sat 9:00-18:00</span>
+            </li>
+
             <li class="footer__list-el">
               E-mail
-              <a href="mailto:info@noble.time@gmail.com">info@noble.time@gmail.com</a>
+              <a href="mailto:info@noble.time@gmail.com"
+                >info@noble.time@gmail.com</a
+              >
             </li>
           </ul>
           <ul class="footer__socials">
             <li class="footer__socials-el">
-              <a href="https://www.instagram.com/" class="footer__socials-el" target="_blank">
+              <a
+                href="https://www.instagram.com/"
+                class="footer__socials-el"
+                target="_blank"
+              >
                 <svg class="footer__socials-svg">
                   <use href="./svg/symbol-defs.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="footer__socials-el">
-              <a href="https://www.facebook.com/" class="footer__socials-el" target="_blank">
+              <a
+                href="https://www.facebook.com/"
+                class="footer__socials-el"
+                target="_blank"
+              >
                 <svg class="footer__socials-svg">
                   <use href="./svg/symbol-defs.svg#icon-facebook"></use>
                 </svg>
               </a>
             </li>
-  
+
             <li class="footer__socials-el">
-              <a href="https://invite.viber.com/?g=abcdef123456789"  class="footer__socials-el" target="_blank">
+              <a
+                href="https://invite.viber.com/?g=abcdef123456789"
+                class="footer__socials-el"
+                target="_blank"
+              >
                 <svg class="footer__socials-svg">
                   <use href="./svg/symbol-defs.svg#icon-viber"></use>
                 </svg>
@@ -460,7 +606,6 @@
             </li>
           </ul>
         </div>
-      
       </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
