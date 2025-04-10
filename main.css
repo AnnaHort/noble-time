@@ -262,6 +262,8 @@ body {
 }
 .swiper-slide {
   height: 276px;
+  flex-direction: column;
+
 }
 .timeles-slide {
 }
@@ -290,7 +292,7 @@ body {
 
 /* ------------------about------------------ */
 .about {
-  padding: 40px 16px;
+  padding: 40px 0;
 }
 .about__img-container {
   position: relative;
@@ -381,17 +383,23 @@ body {
 /* ------------------gallery-section------------------ */
 
 .gallery {
-  padding: 25px 16px;
+  padding: 25px 0px;
 }
 .gallery__container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 8px;
 }
+
 .gallery__img {
+  width: 100%;
 }
+
+.gallery__img-1 {
+  grid-column: span 2 / span 2;
+  width: 100%;
+} 
 
 /* ------------------collection-section------------------ */
 
@@ -469,13 +477,45 @@ body {
       rgba(0, 0, 0, 0.1) 0%,
       rgba(0, 0, 0, 0.5) 100%
     ),
-    url(./img/testimonials-img.jpg);
+    url(./img//testimonials/testimonials-img.jpg);
   width: 270px;
   height: 178px;
   background-repeat: no-repeat;
   background-position: 36% 37%;
   background-size: 600%;
   margin-bottom: 20px;
+}
+
+.testimonials__img-container-2 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(./img/testimonials/testimonials-img-2.jpeg);
+  width: 270px;
+  height: 178px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+  
+}
+
+.testimonials__img-container-3 {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url(./img/testimonials/testimonials-img-3.jpeg);
+  width: 270px;
+  height: 178px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 20px;
+  
 }
 
 .testimonials__svg-container {
@@ -541,6 +581,7 @@ body {
   line-height: 150%;
   letter-spacing: 0%;
   max-width: 252px;
+  text-align: justify;
 }
 
 .testimonials__svg--bottom {
@@ -567,10 +608,9 @@ body {
 
 /* gallery-photos section */
 .gallery-photos {
-  padding: 50px 16px 25px 16px;
+  padding: 50px 0px 25px 0px;
 }
-.container {
-}
+
 .gallery-photos__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -600,17 +640,26 @@ body {
   object-fit: cover;
 }
 
-/* ------------------location------------------ */
+  /* location-section */
 
-.location__container {
-  max-height: 296px;
-  margin-bottom: 24px;
+.location {
+  padding: 25px 0;
+}
+
+.location__container{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#map {
+  max-height: 382px;
 }
 
 /* ------------------showroom------------------ */
 
 .showroom {
-  padding: 25px 16px 50px 16px;
+
 }
 
 .showroom__title {
@@ -698,9 +747,9 @@ body {
 
 /* ------------------mobile------------------ */
 @media screen and (min-width: 420px) {
-  .gallery {
+  /* .gallery {
     padding: 25px 16px;
-  }
+  } */
 }
 
 /* ------------------tablet------------------ */
@@ -716,7 +765,7 @@ body {
   }
 
   .container {
-    max-width: 100%;
+    max-width: 768px;
     padding: 0 40px;
   }
 
@@ -756,7 +805,7 @@ justify-content: space-around;
 
   /* swiper-timeless */
   .timeless {
-    padding: 48px 40px;
+    padding: 48px 0px;
     background: rgb(51, 36, 51);
     background: radial-gradient(
       circle,
@@ -772,7 +821,7 @@ justify-content: space-around;
   /* about */
 
   .about {
-    padding: 40px 40px;
+    padding: 40px 0;
   }
 
   /* brands */
@@ -783,28 +832,16 @@ justify-content: space-around;
 
   /* gallery-section*/
   .gallery {
-    padding: 40px 40px;
+    padding: 40px 0px;
   }
 
   .gallery__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     gap: 16px;
-  }
-
-  .gallery__img {
-    width: 100%;
-  }
-
-  .gallery__img-1 {
-    grid-column: span 2 / span 2;
-    width: 100%;
   }
 
   /* collection-section*/
   .collection {
-    padding: 40px 40px;
+    padding: 40px 0px;
   }
 
   .collection__btn-man {
@@ -823,19 +860,23 @@ justify-content: space-around;
   }
 
   #map {
-    width: 50%;
+    /* width: 50%; */
+}
+
+.location__container {
+  flex-direction: row;
 }
 }
 
 /* ------------------desktop------------------ */
 @media screen and (min-width: 1440px) {
   .container {
-    width: 1726px;
-    padding: 0 48px;
+    max-width: 1726px;
+    padding: 0 40px;
   }
 
   .bg-container {
-    /* padding-bottom: 126px; */
+    padding-bottom: 126px;
   }
   .nav {
     margin-bottom: 128px;
@@ -860,7 +901,6 @@ justify-content: space-around;
   .nav-list__el {
     font-family: "SourceSerif4_Light", Arial, sans-serif;
     font-size: 24px;
-
     line-height: 1.25;
   }
 
@@ -888,4 +928,98 @@ justify-content: space-around;
     min-width: 414px;
     font-size: 28px;
   }
+
+/* ------------------swiper-timeless------------------ */
+.timeless {
+  padding: 90px 0;
+
+}
+.timeless-title {
+font-size: 50px;
+margin-bottom: 60px;
+}
+
+.about{
+display: flex;
+justify-content: space-between;
+gap: 24px;
+align-items: center;
+}
+
+.about__img-container{
+  max-width: 867px;
+  margin-bottom: 0;
+}
+
+.about__text-container{
+  max-width: 728px;
+}
+
+.about__title{
+font-size: 50px;
+line-height: 150%;
+}
+
+.about__text{ 
+font-size: 30px;
+line-height: 150%;
+}
+
+/* ------------------brands-section------------------ */
+.brands__img {
+  width: 200px;
+}
+
+.brands__title {
+  font-size: 50px;
+  line-height: 150%;  
+}
+
+
+/* ---------------gallery-photos section--------------- */
+
+.gallery-photos__list {
+  gap: 16px;
+}
+
+
+/* ------------------collection-section------------------ */
+
+
+.collection__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+
+}
+
+.collection__btn-man{
+  margin-bottom: 0;
+  height: 600px;
+
+}
+
+
+.collection__btn-woman{
+  height: 600px;
+}
+
+.collection__btn-text{
+  width: 380px;
+  font-family: "Lugrasimo-Regular", Arial, sans-serif;
+font-size: 30px;
+line-height: 150%;
+letter-spacing: 0%;
+text-align: center;
+height: 64px;
+}
+
+/* ------------------ testimonials-section ------------------ */
+
+
+
+
+  
 }
