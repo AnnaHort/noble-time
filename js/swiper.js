@@ -46,6 +46,10 @@ const swiperBrands = new Swiper('.swiper-brands', {
         slidesPerView: 3,
         spaceBetween: 30
       },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 30
+      }
     }
 
   });
@@ -71,6 +75,12 @@ const swiperBrands = new Swiper('.swiper-brands', {
         slidesPerView: 2,
         centeredSlides: false,
       },
+
+      1024: {
+        slidesPerView: 3,
+        centeredSlides: false,
+      },
+
     }
 
       });
